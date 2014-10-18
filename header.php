@@ -6,30 +6,19 @@
     }
 
     $page = curPageName();
+    $home = "";
+    $coup = "";
+    $whyus = "";
+    $dist = "";
+    $cont = "";
+    
+    if(strcmp($page, "index.php") == 0) $home='active';
+    else if(strcmp($page, "coupon.php") == 0) $coup='active';
+    else if(strcmp($page, "why_us.php") == 0) $whyus='active';
+    else if(strcmp($page, "distributed_net.php") == 0) $dist='active';
+    else if(strcmp($page, "contact_us.php") == 0) $cont='active';
 
-    if(strcmp($page, "login.php") == 0) $nav = -1;
 
-    $main = $nav;
-    if( $main==1)
-    {
-        $home='active';
-    }
-    elseif( $main==2)
-    {
-        $whyus='active';
-    }
-    elseif( $main==3)
-    {
-        $dist='active';
-    }
-    elseif( $main==4)
-    {
-        $cont='active';
-    }
-    elseif( $main==5)
-    {
-        $coup='active';
-    }
 ?>
 <header class="navbar navbar-inverse navbar-fixed-top wet-asphalt" role="banner">
   <div class="container">
@@ -70,8 +59,8 @@
         </li>
         <?php
             if(isset($_SESSION['company'])) {
-                echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">My Ads</a></li>';
-                echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">Logout</a></li>';
+                echo '<li><a class="btn btn-danger" href="stats.php"> My Ads </a></li>';
+                echo '<li><a class="btn btn-danger" href="logout.php"> Logout </a></li>';
             }
             else {
                 echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">Login</a></li>';
@@ -97,10 +86,10 @@
         <div class="modal-body">
           <div class="form-group">
             <label for ="contact-name" class="col-lg-3 control-label">
-              Username/Email: 
+              Email: 
             </label>
             <div class="col-lg-9">
-              <input type="text" class="form-control"  id="contact-name" name="user" placeholder="Enter Username/Email" required>
+              <input type="email" class="form-control"  id="contact-name" name="email" placeholder="Enter Email" required>
             </div>
           </div>
           <div class="form-group">

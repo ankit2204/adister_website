@@ -1,5 +1,7 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
-<?php $nav=5; ?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -233,11 +235,23 @@ authResult An Object which contains the access token and
                <br>
                <br>
                <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
+               <div class="container">
+      <center>
+        <h4>
+          Adister App lets you get the amazing coupon codes of advertisers who have advertised on Adister notebooks.
+        </h4>
+        <h4>
+          Download Android App &nbsp
+          <i class="icon-android icon-2x">
+          </i>
+        </h4>
+        <a class="btn btn-primary boxed animation animated-item-3" href="https://play.google.com/store/apps/details?id=com.scan.adister" target="_blank">
+          Download
+        </a>
+        <div class="gap">
+        </div>
+      </center>
+    </div>
                
                
                <?php include './footer.php'; ?>

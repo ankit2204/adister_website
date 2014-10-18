@@ -1,5 +1,5 @@
 <?php
-
+    
 	if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 		if(empty($_POST["input_email"]) or empty($_POST["code"])) {

@@ -1,7 +1,15 @@
 <?php
-    session_start();
     
-    $main= $nav;
+    // function to get the current page name
+    function curPageName() {
+        return substr($_SERVER["SCRIPT_NAME"],strrpos($_SERVER["SCRIPT_NAME"],"/")+1);
+    }
+
+    $page = curPageName();
+
+    if(strcmp($page, "login.php") == 0) $nav = -1;
+
+    $main = $nav;
     if( $main==1)
     {
         $home='active';
@@ -61,10 +69,13 @@
             <a href="coupon.php">Coupons</a>
         </li>
         <?php
-            if($_SESSION['company'])
-        <li>
-            <a class="btn btn-danger" href="#login" data-toggle="modal">LogIn</a>
-        </li>
+            if(isset($_SESSION['company'])) {
+                echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">My Ads</a></li>';
+                echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">Logout</a></li>';
+            }
+            else {
+                echo '<li><a class="btn btn-danger" href="#login" data-toggle="modal">Login</a></li>';
+            }
         ?>
       </ul>
     </div>
@@ -76,7 +87,7 @@
   <!-- Login Form Start -->
   <div class="modal-dialog">
     <div class="modal-content">
-      <form class='form-horizontal'>
+      <form class='form-horizontal' action="login.php" method="POST">
         <div class="modal-header">
           <h3>
             LOGIN
@@ -89,7 +100,7 @@
               Username/Email: 
             </label>
             <div class="col-lg-9">
-              <input type="text" class="form-control"  id="contact-name" placeholder="Enter Username/Email">
+              <input type="text" class="form-control"  id="contact-name" name="user" placeholder="Enter Username/Email" required>
             </div>
           </div>
           <div class="form-group">
@@ -97,17 +108,13 @@
               Password: 
             </label>
             <div class="col-lg-9">
-              <input type="password" class="form-control" id="contact-password" placeholder="Password">
+              <input type="password" class="form-control" id="contact-password" name="pass" placeholder="Password" required>
             </div>
           </div>
         </div>
         <div class="modal-footer">
-          <a class="btn btn-default" data-dismiss = "modal">
-            Close
-          </a>
-          <button class="btn btn-primary" type="submit">
-            LogIn
-          </button>
+          <a class="btn btn-default" data-dismiss = "modal"> Close </a>
+          <input class="btn btn-primary" name="submit" value="Login" type="submit">
         </div>
       </form>
       

@@ -1,3 +1,28 @@
+<?php
+    session_start();
+
+    if (!isset($_SESSION['company'])) {
+
+        if(isset($_POST['user']) && isset($_POST['pass'])) {
+            $user = htmlspecialchars(trim($_POST['user']));
+            $pass = htmlspecialchars(trim($_POST['pass']));
+
+            // Make DB connection
+            
+
+
+            $_SESSION['company'] = 
+        }
+        else {
+            echo "<center>something went wrong<br></center>";
+        }
+    }
+    else {
+        header('Location: stats.php');
+    }
+
+?>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -43,3 +68,4 @@
         <?php include './footer.php'; ?>
     </body>
 </html>
+

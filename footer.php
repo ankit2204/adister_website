@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <section id="bottom" class="wet-asphalt ">
   <div class="container">
     <div class="row">

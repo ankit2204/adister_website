@@ -1,5 +1,7 @@
+<?php
+    session_start();
+?>
 <!DOCTYPE html>
-<?php $nav=5; ?>
 <html>
   <head>
     <meta charset="utf-8">
@@ -18,9 +20,6 @@
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://adister.in/assets/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://adister.in/assets/ico/apple-touch-icon-72-precomposed.png">
       <link rel="apple-touch-icon-precomposed" href="http://adister.in/assets/ico/apple-touch-icon-57-precomposed.png">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" >
-      </script>
-      
       
   </head>
   <body>
@@ -58,7 +57,7 @@
             </div>
             
             <div id="form-coupon">
-              <form method="POST" action="validate_form.php" id="form-id">
+              <form method="POST" action="validate.php" id="form-id">
                 <input type="text" id="code" name="code" placeholder="Enter coupon code" required />
                 <input type="hidden" id="input_email" value="" name="input_email">
                 <input type="hidden" id="input_name" value="" name="input_name">
@@ -233,11 +232,23 @@ authResult An Object which contains the access token and
                <br>
                <br>
                <br>
-               <br>
-               <br>
-               <br>
-               <br>
-               <br>
+               <div class="container">
+      <center>
+        <h4>
+          Adister App lets you get the amazing coupon codes of advertisers who have advertised on Adister notebooks.
+        </h4>
+        <h4>
+          Download Android App &nbsp
+          <i class="icon-android icon-2x">
+          </i>
+        </h4>
+        <a class="btn btn-primary boxed animation animated-item-3" href="https://play.google.com/store/apps/details?id=com.scan.adister" target="_blank">
+          Download
+        </a>
+        <div class="gap">
+        </div>
+      </center>
+    </div>
                
                
                <?php include './footer.php'; ?>

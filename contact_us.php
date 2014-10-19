@@ -1,5 +1,8 @@
+<?php
+    session_start();
+?>
+
 <!DOCTYPE html>
-<?php $nav=4; ?>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -99,28 +102,36 @@
             Delhi
           </h3>
           <p>
-            39-A/3rd Floor, Oppo. Asiad Tower, Shahpur Jat,
+            39-A, 3rd Floor, Opp. Asiad Tower, Shahpur Jat,
           </p>
           <p>
             New-Delhi-110048
           </p>
           <div class="gap">
-          </div>
-          <h3>
-            Allahabad
-          </h3>
-          <p>
-            12, Chak, Zero Road, Allahabad (U.P)-211003
-          </p>
-          <div class="gap">
+          
           </div>
         </center>
       </div>
     </div>
   </section>
   <hr>
-  <div class="gap">
-  </div>
+  <div class="container">
+      <center>
+        <h4>
+          Adister App lets you get the amazing coupon codes of advertisers who have advertised on Adister notebooks.
+        </h4>
+        <h4>
+          Download Android App &nbsp
+          <i class="icon-android icon-2x">
+          </i>
+        </h4>
+        <a class="btn btn-primary boxed animation animated-item-3" href="https://play.google.com/store/apps/details?id=com.scan.adister" target="_blank">
+          Download
+        </a>
+        <div class="gap">
+        </div>
+      </center>
+    </div>
   <?php include "./footer.php" ?>
   <script src="js/jquery.js">
   </script>

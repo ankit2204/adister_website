@@ -142,13 +142,13 @@
                     $month_back = date_sub(date_create(date('Y-m-d H:i:s')), date_interval_create_from_date_string('31 days'));
                     
 
-                    if(date_create($row['used_time']) <= $week_back) {
+                    if(date_create($row['used_time']) >= $week_back) {
                         $last_week += 1;
                     }
-                    if(date_create($row['used_time']) <= $month_back) {
+                    if(date_create($row['used_time']) >= $month_back) {
                         $last_month += 1;
                     }
-                    if(date_create($row['used_time']) <= $two_days_back) {
+                    if(date_create($row['used_time']) >= $two_days_back) {
                         $last_day += 1;
                     }
 
@@ -189,15 +189,15 @@
                 echo "<br>";
 
                 echo "<br>";
-                echo "Last day: ".$last_day;
+                echo "Today: ".$last_day;
                 echo "<br>";
 
                 echo "<br>";
-                echo "Last week: ".$last_week;
+                echo "This week: ".$last_week;
                 echo "<br>";
 
                 echo "<br>";
-                echo "Last month: ".$last_month;
+                echo "This month: ".$last_month;
                 echo "<br>";
             ?>
 

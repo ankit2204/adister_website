@@ -1,0 +1,7 @@
+[18-Oct-2014 14:02:01 Etc/GMT] PHP Warning:  mysql_connect(): Access denied for user 'root'@'localhost' (using password: NO) in /home/adistim7/public_html/login.php on line 16
+[18-Oct-2014 14:06:46 Etc/GMT] PHP Warning:  include(/scripts/dbconnection.php): failed to open stream: No such file or directory in /home/adistim7/public_html/login.php on line 11
+[18-Oct-2014 14:06:46 Etc/GMT] PHP Warning:  include(): Failed opening '/scripts/dbconnection.php' for inclusion (include_path='.:/usr/local/altphp54/lib/php') in /home/adistim7/public_html/login.php on line 11
+[18-Oct-2014 14:06:46 Etc/GMT] PHP Warning:  mysql_query(): Access denied for user 'adistim7'@'localhost' (using password: NO) in /home/adistim7/public_html/login.php on line 14
+[18-Oct-2014 14:06:46 Etc/GMT] PHP Warning:  mysql_query(): A link to the server could not be established in /home/adistim7/public_html/login.php on line 14
+[18-Oct-2014 14:16:36 Etc/GMT] PHP Warning:  include(/scripts/chartvalues.php): failed to open stream: No such file or directory in /home/adistim7/public_html/stats.php on line 208
+[18-Oct-2014 14:16:36 Etc/GMT] PHP Warning:  include(): Failed opening '/scripts/chartvalues.php' for inclusion (include_path='.:/usr/local/altphp54/lib/php') in /home/adistim7/public_html/stats.php on line 208

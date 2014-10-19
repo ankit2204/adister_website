@@ -20,9 +20,6 @@
       <link rel="apple-touch-icon-precomposed" sizes="114x114" href="http://adister.in/assets/ico/apple-touch-icon-114-precomposed.png">
       <link rel="apple-touch-icon-precomposed" sizes="72x72" href="http://adister.in/assets/ico/apple-touch-icon-72-precomposed.png">
       <link rel="apple-touch-icon-precomposed" href="http://adister.in/assets/ico/apple-touch-icon-57-precomposed.png">
-      <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js" >
-      </script>
-      
       
   </head>
   <body>
@@ -60,7 +57,7 @@
             </div>
             
             <div id="form-coupon">
-              <form method="POST" action="validate_form.php" id="form-id">
+              <form method="POST" action="validate.php" id="form-id">
                 <input type="text" id="code" name="code" placeholder="Enter coupon code" required />
                 <input type="hidden" id="input_email" value="" name="input_email">
                 <input type="hidden" id="input_name" value="" name="input_name">

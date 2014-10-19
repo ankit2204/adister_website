@@ -9,5 +9,6 @@
 
 	// Select DB
 	mysql_select_db($dbname) or die('could not select db');
-
+	
+	//dont upload to github
 ?>
